@@ -736,6 +736,9 @@ namespace Kudan.AR
 		void OnGUI()
 		{
 			// Display debug GUI with tracking information
+
+			/*
+
 			if (_displayDebugGUI)
 			{
 				GUI.matrix = Matrix4x4.TRS(Vector3.zero, Quaternion.identity, new Vector3(_debugGUIScale, _debugGUIScale, 1f));
@@ -778,6 +781,7 @@ namespace Kudan.AR
 				}
 
 				*/
+			    /*
 
 				if (_trackerPlugin != null && _trackerPlugin.IsTrackingRunning())
 				{
@@ -789,6 +793,9 @@ namespace Kudan.AR
 					}
 				}
 			}
+
+		*/
+
 		}
 
 		/// <summary>

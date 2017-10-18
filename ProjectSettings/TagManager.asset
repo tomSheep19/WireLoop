@@ -13,6 +13,9 @@ TagManager:
   - Health1
   - Health2
   - Health3
+  - UiStar1
+  - UiStar2
+  - UiStar3
   layers:
   - Default
   - TransparentFX
