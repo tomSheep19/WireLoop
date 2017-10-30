@@ -3,25 +3,49 @@
 import UnityEngine.SceneManagement;
 
 function NewGame() {
-	SceneManager.LoadScene(1);
-//	SceneManager.LoadScene(2);	
-		
-//	SceneManager.UnloadSceneAsync(0);
+    //go to select level	
+	SceneManager.LoadSceneAsync(6,LoadSceneMode.Single);
+
 }
 
 function Settings() {
-	SceneManager.LoadScene(3);
-
+    //setting scene
+	
+	SceneManager.LoadSceneAsync(2,LoadSceneMode.Single);
 }
 
 function About() {
-	SceneManager.LoadScene(4);
+    //about scene
+	
+	SceneManager.LoadSceneAsync(3,LoadSceneMode.Single);
 }
 
-function MainMemu() {
-	SceneManager.LoadScene(0);
-//	SceneManager.UnloadSceneAsync(2);
+function MainMenu() {
+    //main menu scene
+	
+	SceneManager.LoadSceneAsync(0,LoadSceneMode.Single);
 
 }
 
+
+function EasyLevel() {
+    //Easy level scene
+	
+	SceneManager.LoadSceneAsync(1,LoadSceneMode.Single);
+
+}
+
+function MediumLevel() {
+    //main menu scene
+	
+	SceneManager.LoadSceneAsync(5,LoadSceneMode.Single);
+
+}
+
+function DifficultLevel() {
+    //main menu scene
+	
+	SceneManager.LoadSceneAsync(4,LoadSceneMode.Single);
+
+}
 

@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{8B206FD3-71C9-2C7E-8254-DCF98CD8524E}</ProjectGuid>
+    <ProjectGuid>{3D122C8E-3F0C-6AD4-0DD6-0DAD115060CA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -51,7 +51,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\camera_follow.cs" />
      <Compile Include="Assets\KudanAR\Samples\Flying\FlyBehaviour_RigidbodyVelocity.cs" />
      <Compile Include="Assets\KudanAR\Samples\Flying\FlyBehaviour_TargetTransform.cs" />
      <Compile Include="Assets\KudanAR\Samples\Scripts\MarkerlessTouch.cs" />
@@ -76,8 +75,11 @@
      <Compile Include="Assets\KudanAR\Scripts\Components\TransformDrivers\MarkerlessTransformDriver.cs" />
      <Compile Include="Assets\KudanAR\Scripts\Components\TransformDrivers\MarkerTransformDriver.cs" />
      <Compile Include="Assets\KudanAR\Scripts\Components\TransformDrivers\TransformDriverBase.cs" />
+     <Compile Include="Assets\Scripts\camera_follow.cs" />
      <Compile Include="Assets\Scripts\ClickButton.cs" />
      <Compile Include="Assets\Scripts\CollisionScript.cs" />
+     <Compile Include="Assets\Scripts\SceneChange.cs" />
+     <Compile Include="Assets\Scripts\TransformLook.cs" />
      <Compile Include="Assets\Simple Helvetica\SimpleHelvetica.cs" />
      <None Include="Assets\Simple Helvetica\readme.txt" />
      <None Include="Assets\KudanAR\Materials\Background.shader" />
@@ -85,7 +87,7 @@
      <None Include="Assets\KudanAR\Materials\DebugFlat.shader" />
      <None Include="Assets\KudanAR\Resources\YpCbCr.shader" />
  <Reference Include="Facebook.Unity.Settings">
- <HintPath>/Users/miemie/Documents/WireLoop/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+ <HintPath>/Users/miemie/Downloads/WireLoop-master 2/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>

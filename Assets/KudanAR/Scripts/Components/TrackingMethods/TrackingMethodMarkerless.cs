@@ -55,6 +55,8 @@ namespace Kudan.AR
 
             trackable.isDetected = _kudanTracker.ArbiTrackIsTracking();
 
+
+
             _updateMarkerEvent.Invoke(trackable);
 		}
 

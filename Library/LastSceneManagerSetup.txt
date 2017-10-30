@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scene_/KudanSample 1.unity
+- path: Assets/Scene_/DifficultLevel.unity
   isLoaded: 1
   isActive: 1

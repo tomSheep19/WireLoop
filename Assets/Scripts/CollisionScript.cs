@@ -89,6 +89,11 @@ public class CollisionScript : MonoBehaviour {
 
 
 		}
+		if (other.gameObject.CompareTag ("Indicator")) {
+			collisionText.text = "Too Close!";
+			Handheld.Vibrate ();
+			collisionText.text = "";
+		}
 
 	}
 

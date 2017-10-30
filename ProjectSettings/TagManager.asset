@@ -16,6 +16,8 @@ TagManager:
   - UiStar1
   - UiStar2
   - UiStar3
+  - Loop
+  - Indicator
   layers:
   - Default
   - TransparentFX

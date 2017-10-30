@@ -212,6 +212,7 @@ namespace Kudan.AR
 				Debug.LogError ("There should only be one Kudan Tracker active at once.");
 				gameObject.SetActive (false);
 				Destroy(gameObject);
+
 			}
 		}
 

@@ -11,8 +11,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scene_/KudanSample 1.unity
     guid: 8cb4a5ad9f465ee48b8ebdf3880b015d
-  - enabled: 1
-    path: Assets/Scene_/Scene2.unity
+  - enabled: 0
+    path: 
     guid: d74b82fc8391e4140a1a45f502306f55
   - enabled: 1
     path: Assets/Scene_/Settings.unity
@@ -20,3 +20,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scene_/About.unity
     guid: efa5f55f9cc314dbcb1103c305444d9d
+  - enabled: 1
+    path: Assets/Scene_/DifficultLevel.unity
+    guid: 38f5a29f9f2e50443b0387f9c0e8dfab
+  - enabled: 1
+    path: Assets/Scene_/MediumLevel.unity
+    guid: 8ac4c0383df847d4982612c4ddd38168
+  - enabled: 1
+    path: Assets/Scene_/Select Level.unity
+    guid: 5b4850eb71b68344591f7f46e511ed75
