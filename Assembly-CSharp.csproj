@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{3D122C8E-3F0C-6AD4-0DD6-0DAD115060CA}</ProjectGuid>
+    <ProjectGuid>{9AB1581B-A176-2592-FA6A-A96D20392E3C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -78,7 +78,9 @@
      <Compile Include="Assets\Scripts\camera_follow.cs" />
      <Compile Include="Assets\Scripts\ClickButton.cs" />
      <Compile Include="Assets\Scripts\CollisionScript.cs" />
+     <Compile Include="Assets\Scripts\DistanceIndicator.cs" />
      <Compile Include="Assets\Scripts\SceneChange.cs" />
+     <Compile Include="Assets\Scripts\starsmoving.cs" />
      <Compile Include="Assets\Scripts\TransformLook.cs" />
      <Compile Include="Assets\Simple Helvetica\SimpleHelvetica.cs" />
      <None Include="Assets\Simple Helvetica\readme.txt" />
@@ -87,7 +89,7 @@
      <None Include="Assets\KudanAR\Materials\DebugFlat.shader" />
      <None Include="Assets\KudanAR\Resources\YpCbCr.shader" />
  <Reference Include="Facebook.Unity.Settings">
- <HintPath>/Users/miemie/Downloads/WireLoop-master 2/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+ <HintPath>/Users/miemie/Downloads/WireLoop-masterSecond/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>

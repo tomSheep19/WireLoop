@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{B7048497-FF13-0C06-13FA-A3BFFB36AF14}</ProjectGuid>
+    <ProjectGuid>{6E6AFC98-0E00-2683-23E2-5BC8EFC6A7AD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -62,7 +62,7 @@
      <None Include="Assets\KudanAR\Materials\DebugFlat.shader" />
      <None Include="Assets\KudanAR\Resources\YpCbCr.shader" />
  <Reference Include="Facebook.Unity.Settings">
- <HintPath>/Users/miemie/Downloads/WireLoop-master 2/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+ <HintPath>/Users/miemie/Downloads/WireLoop-masterSecond/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
@@ -148,9 +148,9 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{3D122C8E-3F0C-6AD4-0DD6-0DAD115060CA}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+      <Project>{9AB1581B-A176-2592-FA6A-A96D20392E3C}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-UnityScript.csproj">
-      <Project>{D39F1EC6-8998-7BA6-C534-01F562E95EEF}</Project>      <Name>Assembly-UnityScript</Name>    </ProjectReference>
+      <Project>{EB3EB31C-1B17-76DA-806C-EA3556FB6E9E}</Project>      <Name>Assembly-UnityScript</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

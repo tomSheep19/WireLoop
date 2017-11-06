@@ -17,7 +17,11 @@ TagManager:
   - UiStar2
   - UiStar3
   - Loop
+  - DistanceIndicator
   - Indicator
+  - IndicatorRed
+  - IndicatorYellow
+  - IndicatorGreen
   layers:
   - Default
   - TransparentFX

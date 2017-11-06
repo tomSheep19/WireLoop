@@ -1,0 +1,40 @@
+<linker>
+	<assembly fullname="Assembly-UnityScript">
+		<type fullname="NewBehaviourScript">
+			<method name="NewGame"/>
+			<method name="Settings"/>
+			<method name="About"/>
+			<method name="MainMenu"/>
+			<method name="MainMenu"/>
+			<method name="DifficultLevel"/>
+			<method name="MainMenu"/>
+			<method name="MediumLevel"/>
+			<method name="EasyLevel"/>
+		</type>
+		<type fullname="MovingStars">
+			<method name="MovingStars"/>
+		</type>
+	</assembly>
+	<assembly fullname="Assembly-CSharp">
+		<type fullname="Kudan.AR.Samples.SampleApp">
+			<method name="StartClicked"/>
+			<method name="MarkerlessClicked"/>
+			<method name="MarkerClicked"/>
+			<method name="StartClicked"/>
+			<method name="MarkerlessClicked"/>
+			<method name="MarkerClicked"/>
+			<method name="StartClicked"/>
+			<method name="MarkerlessClicked"/>
+			<method name="MarkerClicked"/>
+			<method name="MarkerClicked"/>
+			<method name="StartClicked"/>
+			<method name="MarkerlessClicked"/>
+		</type>
+		<type fullname="SceneChange">
+			<method name="changeScene"/>
+			<method name="changeScene"/>
+			<method name="changeScene"/>
+			<method name="changeScene"/>
+		</type>
+	</assembly>
+</linker>
