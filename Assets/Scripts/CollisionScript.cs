@@ -5,23 +5,37 @@ using UnityEngine.UI;
 
 public class CollisionScript : MonoBehaviour {
 
-	public Text collisionText;
-	public Text youWinText;
+	//public Text gameStatusText;
 	public Texture starFillTexture;
 	private int healthcount;
 	private int starsCount;
 	private GameObject[] stars;
-	private Color distanceIndicator;
-
-
+	private GameObject[] wires;
+	[SerializeField]private GameObject loseImage;
+	[SerializeField]private GameObject winImage;
+	[SerializeField]private GameObject backImage;
+	private bool gameBegin;
 	// Use this for initialization
+
+	// songs variables
+	public AudioSource Toching_Stars;
+	public AudioSource Win;
+	public AudioSource Lose;
+	public AudioSource BackGroundMusic;
+
 	void Start () {
-		
-		collisionText.text = "";
-		youWinText.text = "";
+		//gameStatusText.text = "Please start with start point!";
+		loseImage.SetActive(false);	
+		winImage.SetActive(false);
+		backImage.SetActive(true);
 		healthcount = 3;
 		starsCount = 0;
-		GameObject.FindGameObjectWithTag("Wire").SetActive(true);
+		gameBegin = false;
+		wires = GameObject.FindGameObjectsWithTag("Wire");
+		foreach (GameObject wire in wires)
+		{
+			wire.SetActive(true);
+		}
 		stars = GameObject.FindGameObjectsWithTag("Star");
 		foreach (GameObject star in stars)
 		{
@@ -31,114 +45,130 @@ public class CollisionScript : MonoBehaviour {
 
 
 	void OnTriggerEnter(Collider other) {
-		if (other.gameObject.CompareTag ("Wire")) {
-
-			collisionText.text = "Collision";
-			Handheld.Vibrate ();
-			healthcount--;
-			switch(healthcount) {
-			case 2  :
-				GameObject.FindGameObjectWithTag("Health3").SetActive(false);
-				break; /* optional */
-			case 1 :
-				GameObject.FindGameObjectWithTag("Health2").SetActive(false);
-				break; /* optional */
-			case 0:
-				GameObject.FindGameObjectWithTag ("Health1").SetActive (false);
-				collisionText.text = "";
-				youWinText.text = "You Lose";
-				break; /* optional */
-			}
-		}
-
-		if (other.gameObject.CompareTag ("Star")) {
-
-			starsCount++;
-
-			switch(starsCount) {
-			case 1  :
-				GameObject.FindGameObjectWithTag("UiStar1").GetComponent<RawImage>().texture=(Texture) starFillTexture;
-				break; /* optional */
-			case 2 :
-				GameObject.FindGameObjectWithTag("UiStar2").GetComponent<RawImage>().texture=(Texture) starFillTexture;
-				break; /* optional */
-			case 3 :
-				GameObject.FindGameObjectWithTag("UiStar3").GetComponent<RawImage>().texture=(Texture) starFillTexture;
-				break; /* optional */
-			}
-
-			Handheld.Vibrate ();
-			other.gameObject.SetActive (false);
-		}
-
+		//Game starts after pass the startCube
 		if (other.gameObject.CompareTag ("StartCube")) {
-
-			collisionText.text = "Begin Game";
+			//gameStatusText.text = "Game starts!";
 			Handheld.Vibrate ();
 			other.gameObject.SetActive (false);
+			gameBegin = true;
+			// paly the starting game song
+			BackGroundMusic.Play();
+		}
+		//If game starts
+		if (gameBegin == true) {
+			if (other.gameObject.CompareTag ("Wire")) {
+				//gameStatusText.text = "Whoops Collision!";
+				Handheld.Vibrate ();
+				healthcount--;
+				switch(healthcount) {
+				case 2  :
+					GameObject.FindGameObjectWithTag("Health3").SetActive(false);
+					break; 
+				case 1 :
+					GameObject.FindGameObjectWithTag("Health2").SetActive(false);
+					break;
+				case 0:
+
+					GameObject.FindGameObjectWithTag ("Health1").SetActive (false);
+					stars = GameObject.FindGameObjectsWithTag("Star");
+					foreach (GameObject star in stars)
+					{
+						star.SetActive(false);
+					}
+					wires = GameObject.FindGameObjectsWithTag("Wire");
+					foreach (GameObject wire in wires)
+					{
+						wire.SetActive(false);
+					}
+					loseImage.SetActive(true);
+					backImage.SetActive(false);
+					// paly the lose song
+					Lose.Play();
+					break; 
+				}
+			}
+
+			if (other.gameObject.CompareTag ("Star")) {
+				starsCount++;
+				//gameStatusText.text = "Star collected!";
+				switch(starsCount) {
+				case 1  :
+					GameObject.FindGameObjectWithTag("UiStar1").GetComponent<RawImage>().texture=(Texture) starFillTexture;
+					break; 
+				case 2 :
+					GameObject.FindGameObjectWithTag("UiStar2").GetComponent<RawImage>().texture=(Texture) starFillTexture;
+					break;
+				case 3 :
+					GameObject.FindGameObjectWithTag("UiStar3").GetComponent<RawImage>().texture=(Texture) starFillTexture;
+					break;
+				}
+				Handheld.Vibrate ();
+				other.gameObject.SetActive (false);
+				// paly the song
+				Toching_Stars.Play();
+			}
+
+			if (other.gameObject.CompareTag ("EndCube")) {
+				other.gameObject.SetActive (false);
+				winImage.SetActive(true);
+				backImage.SetActive(false);
+				Handheld.Vibrate ();
+				// paly the win song
+				Win.Play();
+			}
+
+			if (other.gameObject.CompareTag ("IndicatorYellow")) {
+				//collisionText.text = "Too Close";
+				GameObject current = GameObject.FindGameObjectWithTag ("Loop");
+				Material curMaterial = Resources.Load("Shade_Loop_Orange", typeof(Material)) as Material;
+				current.GetComponent<MeshRenderer>().material = curMaterial;
+			}
+
+			if (other.gameObject.CompareTag ("IndicatorRed")) {
+				//collisionText.text = "A Lit Bit Close !";
+				GameObject current = GameObject.FindGameObjectWithTag ("Loop");
+				Material curMaterial = Resources.Load("Shade_Loop_Red", typeof(Material)) as Material;
+				current.GetComponent<MeshRenderer>().material = curMaterial;
+			}
+
+
+
 
 
 		}
 
-		if (other.gameObject.CompareTag ("EndCube")) {
-			
-			other.gameObject.SetActive (false);
-			youWinText.text = "You Win!";
-			collisionText.text = "";
-			Handheld.Vibrate ();
-		}
+
+		//If game doesn't start
 		/*
-		if (other.gameObject.CompareTag ("IndicatorGreen")) {
-			collisionText.text = "Too Close";
-			GameObject current = GameObject.FindGameObjectWithTag ("Loop");
-			Material curMaterial = Resources.Load("Shade_Loop_Green", typeof(Material)) as Material;
-			current.GetComponent<MeshRenderer>().material = curMaterial;
-
-		}*/
-
-		if (other.gameObject.CompareTag ("IndicatorYellow")) {
-			collisionText.text = "Too Close";
-			GameObject current = GameObject.FindGameObjectWithTag ("Loop");
-			Material curMaterial = Resources.Load("Shade_Loop_Orange", typeof(Material)) as Material;
-			current.GetComponent<MeshRenderer>().material = curMaterial;
-
+		if (gameBegin == false) {
+			if (other.gameObject.CompareTag ("Wire")) {
+				gameStatusText.text = "Please start with start point!";
+			}
+			if (other.gameObject.CompareTag ("Star")) {
+				gameStatusText.text = "Please start with start point!";
+			}
+			if (other.gameObject.CompareTag ("EndCube")) {
+				gameStatusText.text = "Please start with start point!";
+			}
 		}
-
-		if (other.gameObject.CompareTag ("IndicatorRed")) {
-			collisionText.text = "A Lit Bit Close !";
-			GameObject current = GameObject.FindGameObjectWithTag ("Loop");
-			Material curMaterial = Resources.Load("Shade_Loop_Red", typeof(Material)) as Material;
-			current.GetComponent<MeshRenderer>().material = curMaterial;
-		}
-
-		//When Moving up, the color should be red -> orange -> normal
-		if (other.gameObject.CompareTag ("IndicatorYellow")) {
-			collisionText.text = "Too Close !";
-			GameObject current = GameObject.FindGameObjectWithTag ("Loop");
-			Material curMaterial = Resources.Load("Shade_Loop_Orange", typeof(Material)) as Material;
-			current.GetComponent<MeshRenderer>().material = curMaterial;
-
-		}
-			
-
-	}
-
-	/*
-	Material material = new Material(Shader.Find("Transparent/Diffuse"));
-	material.color = Color.green;
-	//material.SetVector("_Color",new Vector4(1,1,1,1));
-	GetComponent<Renderer>().material = material;
-	*/
+		*/
+	} 
 	void OnTriggerExit(Collider other){
-		if (other.gameObject.CompareTag ("Wire")) {
+		//When Moving up, the color should be red -> orange -> normal
 
-			collisionText.text = "Going Great";
+		if (other.gameObject.CompareTag ("IndicatorRed") ) {
+			//collisionText.text = "Going Great";
+			GameObject current = GameObject.FindGameObjectWithTag ("Loop");
+			Material curMaterial = Resources.Load("Shade_Loop_Orange", typeof(Material)) as Material;
+			current.GetComponent<MeshRenderer> ().material = curMaterial;
+
+			//distanceIndicator =  new Color(182, 153, 127, 255);
+			//current.GetComponent<MeshRenderer> ().material.color = distanceIndicator;
 
 		}
 
-
-		if (other.gameObject.CompareTag ("IndicatorRed") || other.gameObject.CompareTag ("IndicatorYellow")) {
-			collisionText.text = "Going Great";
+		if (other.gameObject.CompareTag ("IndicatorYellow")) {
+			//collisionText.text = "Going Great";
 			GameObject current = GameObject.FindGameObjectWithTag ("Loop");
 			Material curMaterial = Resources.Load("Shade_Original", typeof(Material)) as Material;
 			current.GetComponent<MeshRenderer> ().material = curMaterial;

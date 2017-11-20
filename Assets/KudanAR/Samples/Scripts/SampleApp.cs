@@ -14,7 +14,8 @@ namespace Kudan.AR.Samples
         public TrackingMethodMarkerless _markerlessTracking;	// The reference to the markerless tracking method that lets the tracker know which method it is using
 
 		public Text buttonText;
-
+		[SerializeField]private GameObject startImage;
+		[SerializeField]private GameObject pauseImage;
         public void MarkerClicked()
         {
             _kudanTracker.ChangeTrackingMethod(_markerTracking);	// Change the current tracking method to marker tracking
@@ -47,11 +48,15 @@ namespace Kudan.AR.Samples
 		{
 			if (!_kudanTracker.ArbiTrackIsTracking ()) 
 			{
-				buttonText.text = "Start Markerless Tracking";
+				buttonText.text = "";
+				startImage.SetActive (true);
+				pauseImage.SetActive (false);
 			} 
 			else 
 			{
-				buttonText.text = "Stop Markerless Tracking";
+				buttonText.text = "";
+				startImage.SetActive (false);
+				pauseImage.SetActive (true);
 			}
 		}
 	}

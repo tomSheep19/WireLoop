@@ -1,9 +1,10 @@
 <linker>
 	<assembly fullname="Assembly-UnityScript">
 		<type fullname="NewBehaviourScript">
+			<method name="About"/>
+			<method name="Quit"/>
 			<method name="NewGame"/>
 			<method name="Settings"/>
-			<method name="About"/>
 			<method name="MainMenu"/>
 			<method name="MainMenu"/>
 			<method name="DifficultLevel"/>
@@ -16,22 +17,30 @@
 		</type>
 	</assembly>
 	<assembly fullname="Assembly-CSharp">
-		<type fullname="Kudan.AR.Samples.SampleApp">
-			<method name="StartClicked"/>
-			<method name="MarkerlessClicked"/>
-			<method name="MarkerClicked"/>
-			<method name="StartClicked"/>
-			<method name="MarkerlessClicked"/>
-			<method name="MarkerClicked"/>
-			<method name="StartClicked"/>
-			<method name="MarkerlessClicked"/>
-			<method name="MarkerClicked"/>
-			<method name="MarkerClicked"/>
-			<method name="StartClicked"/>
-			<method name="MarkerlessClicked"/>
-		</type>
 		<type fullname="SceneChange">
 			<method name="changeScene"/>
+			<method name="changeScene"/>
+			<method name="changeScene"/>
+			<method name="changeScene"/>
+			<method name="changeScene"/>
+			<method name="changeScene"/>
+			<method name="changeScene"/>
+		</type>
+		<type fullname="Kudan.AR.Samples.SampleApp">
+			<method name="StartClicked"/>
+			<method name="MarkerClicked"/>
+			<method name="MarkerlessClicked"/>
+			<method name="StartClicked"/>
+			<method name="MarkerlessClicked"/>
+			<method name="MarkerClicked"/>
+			<method name="StartClicked"/>
+			<method name="MarkerlessClicked"/>
+			<method name="MarkerClicked"/>
+			<method name="StartClicked"/>
+			<method name="MarkerlessClicked"/>
+			<method name="MarkerClicked"/>
+		</type>
+		<type fullname="MSceneChange">
 			<method name="changeScene"/>
 			<method name="changeScene"/>
 			<method name="changeScene"/>

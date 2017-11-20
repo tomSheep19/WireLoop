@@ -4,7 +4,7 @@
     <key>CFBundleDevelopmentRegion</key>
     <string>en</string>
     <key>CFBundleDisplayName</key>
-    <string>WireLoop</string>
+    <string>WireLoopAR</string>
     <key>CFBundleExecutable</key>
     <string>${EXECUTABLE_NAME}</string>
     <key>CFBundleIconFiles</key>
@@ -37,11 +37,11 @@
       <true />
     </dict>
     <key>NSCameraUsageDescription</key>
-    <string>jhtfjhjtf</string>
+    <string>fd</string>
     <key>NSLocationWhenInUseUsageDescription</key>
-    <string>utu</string>
+    <string>df</string>
     <key>NSMicrophoneUsageDescription</key>
-    <string>fyf</string>
+    <string>dfs</string>
     <key>UIApplicationExitsOnSuspend</key>
     <false />
     <key>UILaunchStoryboardName~ipad</key>
@@ -66,13 +66,16 @@
     <string>UIStatusBarStyleDefault</string>
     <key>UISupportedInterfaceOrientations</key>
     <array>
+      <string>UIInterfaceOrientationPortrait</string>
+      <string>UIInterfaceOrientationPortraitUpsideDown</string>
       <string>UIInterfaceOrientationLandscapeRight</string>
+      <string>UIInterfaceOrientationLandscapeLeft</string>
     </array>
     <key>Unity_LoadingActivityIndicatorStyle</key>
     <integer>-1</integer>
     <key>UnityCloudProjectID</key>
-    <string></string>
+    <string>365048a2-83df-4253-8c6e-1e4f014062fc</string>
     <key>UnityCrashSubmissionURL</key>
-    <string>https://a:b@perf-events.cloud.unity3d.com/symbolicate</string>
+    <string>https://perf-events.cloud.unity3d.com/symbolicate</string>
   </dict>
 </plist>

@@ -4,24 +4,21 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - UiStar1
+  - UiStar3
+  - Health1
+  - Wire
+  - Health2
+  - UiStar2
+  - EndCube
+  - Health3
+  - StartCube
   - Markerless
   - Marker
-  - Wire
-  - EndCube
-  - StartCube
   - Star
-  - Health1
-  - Health2
-  - Health3
-  - UiStar1
-  - UiStar2
-  - UiStar3
   - Loop
-  - DistanceIndicator
-  - Indicator
-  - IndicatorRed
   - IndicatorYellow
-  - IndicatorGreen
+  - IndicatorRed
   layers:
   - Default
   - TransparentFX

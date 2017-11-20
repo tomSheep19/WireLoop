@@ -19,17 +19,23 @@
 <type fullname="Kudan.AR.MarkerTransformDriver" preserve="all"/>
 <type fullname="Kudan.AR.TransformDriverBase" preserve="all"/>
 <type fullname="camera_follow" preserve="all"/>
+<type fullname="ChangeMusicVolume" preserve="all"/>
 <type fullname="ClickButton" preserve="all"/>
 <type fullname="CollisionScript" preserve="all"/>
-<type fullname="DistanceIndicator" preserve="all"/>
+<type fullname="MCollisionScript" preserve="all"/>
+<type fullname="MSceneChange" preserve="all"/>
+<type fullname="MSelfRotate" preserve="all"/>
+<type fullname="MStarRotate" preserve="all"/>
 <type fullname="SceneChange" preserve="all"/>
 <type fullname="starsmoving" preserve="all"/>
+<type fullname="starsmoving1" preserve="all"/>
+<type fullname="starsmoving2" preserve="all"/>
 <type fullname="TransformLook" preserve="all"/>
 <type fullname="SimpleHelvetica" preserve="all"/>
 </assembly>
 <assembly fullname="Assembly-UnityScript">
-<type fullname="NewBehaviourScript" preserve="all"/>
 <type fullname="MovingStars" preserve="all"/>
+<type fullname="NewBehaviourScript" preserve="all"/>
 </assembly>
 <assembly fullname="UnityEngine.UI">
 <type fullname="UnityEngine.EventSystems.EventSystem" preserve="all"/>
@@ -74,5 +80,8 @@
 <type fullname="UnityEngine.UI.Outline" preserve="all"/>
 <type fullname="UnityEngine.UI.PositionAsUV1" preserve="all"/>
 <type fullname="UnityEngine.UI.Shadow" preserve="all"/>
+</assembly>
+<assembly fullname="UnityEngine.Analytics">
+<type fullname="UnityEngine.Analytics.AnalyticsTracker" preserve="all"/>
 </assembly>
 </linker>

@@ -11,9 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scene_/EasyLevel.unity
     guid: 8cb4a5ad9f465ee48b8ebdf3880b015d
-  - enabled: 0
-    path: 
-    guid: d74b82fc8391e4140a1a45f502306f55
   - enabled: 1
     path: Assets/Scene_/Settings.unity
     guid: 4a7b1dcd951a4481681b7d62be5ac87b
